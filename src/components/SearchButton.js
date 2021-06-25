@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-class Search extends Component {
+
+class SearchButton extends Component {
     state = {  }
     render() { 
-        return ( 
+        return (  
+
             
-         );
+        );
     }
 }
  
-export default Search;
+export default SearchButton;
