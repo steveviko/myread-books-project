@@ -9,7 +9,7 @@ class SearchButton extends Component {
             
             
                 <div className="open-search">
-                <button onClick={() => this.setState({ showSearchPage: true })}>Add a book</button>
+                <button onClick={() => this.props.showSearchPage(true)}>Add a book</button>
                 </div>
             
 

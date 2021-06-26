@@ -41,6 +41,7 @@ class BooksApp extends React.Component {
           books[0].shelf = shelf;
         } else {
           newList.push(book);
+          book.shelf = shelf;
           
         }
         this.setState({books: newList});
