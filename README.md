@@ -5,6 +5,11 @@ This is a bookshelf App that allows one to select and categorize books you have 
 
 ## Link
 
+# About the Project
+
+This project was created using [Create React App](https://github.com/facebook/create-react-app). Udacity  provided the [starter code](https://github.com/udacity/reactnd-project-myreads-starter).
+
+The name of this project is called MyReads, and it is one of many projects included in Udacity's front-end web developer nanodegree program. In this project I created a bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library that I sed to fetch information for you interact with the application.
 
 
 ## Installation
