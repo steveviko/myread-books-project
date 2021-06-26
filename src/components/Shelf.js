@@ -14,17 +14,17 @@ class Shelf extends Component {
                 <h2 className="bookshelf-title">{this.props.title}</h2>
                 <div className="bookshelf-books">
                 <ol className="books-grid">
-                    {this.props.books.filter(book => book.shelf === 'currentlyReading').map( book => (
-                        <li key={book.id}>
-                        <Book
-                            book={book}
-                            changeShelf= {this.props.changeShelf}
-                            assignedShelf={book.shelf}
+                {this.props.books.map( book => (
+                    <li key={book.id}>
+                    <Book
+                        book={book}
+                        changeShelf= {this.props.changeShelf}
+                        assignedShelf={book.shelf}
 
-                        />
-                        </li>
+                    />
+                    </li>
 
-                    ))}
+                ))}
                 </ol>
                 </div>
       </div>
