@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import Header from './components/Header';
@@ -51,7 +52,7 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-        {this.state.showSearchPage ? (
+       <Route path="/search" render={() =>(
 
              <Search 
              showSearchPage={this.updateSearch} 
@@ -59,8 +60,10 @@ class BooksApp extends React.Component {
              changeShelf={this.changeBookShelf}
              
              />
+             )}/>
 
-        ) : (
+        
+          <Route exact path="/" render ={() => (
           <div className="list-books">
 
               <Header />
@@ -68,7 +71,7 @@ class BooksApp extends React.Component {
               <SearchButton showSearchPage={this.updateSearch}/>
 
           </div>
-        )}
+         )}/>
       </div>
     )
   }
