@@ -3,9 +3,10 @@
 This is a bookshelf App that allows one to select and categorize books you have read, are currently reading, or want to read. The project uses React to build the application and provides an API server and client library that you will use to persist information as you interact with the application.
 
 
-## Link
+## Link to Live Demo APP
+$ https://deploy-preview-4--focused-hamilton-cda564.netlify.app
 
-# About the Project
+## About the Project
 
 This project was created using [Create React App](https://github.com/facebook/create-react-app). Udacity  provided the [starter code](https://github.com/udacity/reactnd-project-myreads-starter).
 
