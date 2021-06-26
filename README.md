@@ -4,7 +4,7 @@ This is a bookshelf App that allows one to select and categorize books you have 
 
 
 ## Live Demo for Bookshelf APP
-Link [Here] (https://deploy-preview-4--focused-hamilton-cda564.netlify.app)
+Link: https://deploy-preview-4--focused-hamilton-cda564.netlify.app
 
 ## About the Project
 
