@@ -30,20 +30,18 @@ class BooksApp extends React.Component {
   componentDidMount() {
     BooksAPI.getAll().then((resp) => this.setState({books: resp}));
   }
+
   changeBookShelf =(book, shelf) => {
     BooksAPI
       .update(book, shelf)
       .then(response => {
-        let newList = this
-          .state
-          .books.
-          slice(0);
+        let newList = this.state.books.slice(0);
         const books = newList.filter(listBook => listBook.id === book.id);
         if (books.length) {
           books[0].shelf = shelf;
         } else {
           newList.push(book);
-          // newList = BookUtils.sortAllBooks(newList);
+          
         }
         this.setState({books: newList});
       })
@@ -54,7 +52,12 @@ class BooksApp extends React.Component {
       <div className="app">
         {this.state.showSearchPage ? (
 
-             <Search showSearchPage={this.updateSearch} />
+             <Search 
+             showSearchPage={this.updateSearch} 
+             books={this.state.books} 
+             changeShelf={this.changeBookShelf}
+             
+             />
 
         ) : (
           <div className="list-books">
