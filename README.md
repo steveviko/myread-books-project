@@ -3,7 +3,9 @@
 This is a bookshelf App that allows one to select and categorize books you have read, are currently reading, or want to read. The project uses React to build the application and provides an API server and client library that you will use to persist information as you interact with the application.
 
 
-## Link
+
+## Live Demo for Bookshelf APP
+Link: https://deploy-preview-4--focused-hamilton-cda564.netlify.app
 
 # About the Project
 
