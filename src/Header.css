@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    align-items: center;  
+    
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+}
+.link{
+    text-decoration: none;
+}
+
+.logo{
+    display: flex;
+}
+.logo:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.logo:hover > .menu_icon{
+  color: red;
+}
+
+.logo:hover > .title{
+    font-weight: bold;
+  }
