@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import Header from './components/Header';
@@ -30,20 +31,19 @@ class BooksApp extends React.Component {
   componentDidMount() {
     BooksAPI.getAll().then((resp) => this.setState({books: resp}));
   }
+
   changeBookShelf =(book, shelf) => {
     BooksAPI
       .update(book, shelf)
       .then(response => {
-        let newList = this
-          .state
-          .books.
-          slice(0);
+        let newList = this.state.books.slice(0);
         const books = newList.filter(listBook => listBook.id === book.id);
         if (books.length) {
           books[0].shelf = shelf;
         } else {
           newList.push(book);
-          // newList = BookUtils.sortAllBooks(newList);
+          book.shelf = shelf;
+          
         }
         this.setState({books: newList});
       })
@@ -52,11 +52,18 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-        {this.state.showSearchPage ? (
+       <Route path="/search" render={() =>(
 
-             <Search showSearchPage={this.updateSearch} />
+             <Search 
+             showSearchPage={this.updateSearch} 
+             books={this.state.books} 
+             changeShelf={this.changeBookShelf}
+             
+             />
+             )}/>
 
-        ) : (
+        
+          <Route exact path="/" render ={() => (
           <div className="list-books">
 
               <Header />
@@ -64,7 +71,7 @@ class BooksApp extends React.Component {
               <SearchButton showSearchPage={this.updateSearch}/>
 
           </div>
-        )}
+         )}/>
       </div>
     )
   }
